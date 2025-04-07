@@ -121,9 +121,9 @@ footer a:hover {
     color: #2e7d32;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     body {
-        padding: 100px 10px 30px;
+        padding: 50px 5%;
     }
 
     h1 {
