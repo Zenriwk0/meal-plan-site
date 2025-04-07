@@ -1,0 +1,147 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 50px 20%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    font-size: 1.6rem;
+    position: relative;
+    cursor: pointer;
+    padding-right: 25px;
+}
+h2::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%) translateX(5px) rotate(0deg);
+    transition: transform 0.3s ease, color 0.5s ease;
+    font-size: 1rem;
+    color: #4CAF50;
+}
+h2.collapsed::after {
+    transform: translateY(-55%) translateX(5px) rotate(-180deg);
+    transition: transform 0.3s ease, color 0.5s ease;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Circle Button */
+.circle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: white;
+    font-size: 24px;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: #388e3c;
+}
+.circle-button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.collapsible {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+@keyframes blinkAnimation {
+    0% { background-color: #d4edda; }
+    50% { background-color: #a3dca8; }
+    100% { background-color: #d4edda; }
+}
+
+.blink {
+    animation: blinkAnimation 0.5s ease;
+}
+
+.checked {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #2e7d32;
+}
+
+@media (max-width: 720px) {
+    body {
+        padding: 50px 5%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    .circle-button {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+        line-height: 80px;
+    }
+}
